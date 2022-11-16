@@ -1,18 +1,21 @@
-import { Container, Navbar, Nav, Image, Card, OverlayTrigger, Tooltip, Button } from "react-bootstrap";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faChevronCircleLeft, faCircleChevronRight, faChevronRight } from "@fortawesome/free-solid-svg-icons";
+import { Container, Navbar, Nav, Image, Card, OverlayTrigger, Tooltip, Table } from "react-bootstrap";
 import "./styles/App.css";
 import ImgProfile from "./img/perfil.jpg";
 import logoLaravel from "./img/logos/logoLaravel.png";
 import logoPhp from "./img/logos/logoPhp.png";
 import logoVue from "./img/logos/logoVue.png";
 import logoReact from "./img/logos/logoReact.png";
+import logoGit from "./img/logos/logoGit.png";
+import logoJavascript from "./img/logos/logoJavascript.png";
+import logoBootstrap from "./img/logos/logoBootstrap.png";
+import logoPostgresql from "./img/logos/logoPostgresql.png";
+import logoSqlserver from "./img/logos/logoSqlserver.png";
 
 function App() {
 
   return (
     <Container style={{marginTop: '20px'}}>
-      <Navbar expand="lg" sticky='top' className='mt-3' style={{borderRadius: '15px', backgroundColor: 'rgb(140, 23, 26)'}}>
+      <Navbar expand="lg" sticky='top' className='mt-3 bg-redblack' style={{borderRadius: '15px', backgroundColor: 'rgb(140, 23, 26)'}}>
         <Container>
           <Navbar.Brand href="#about-me"></Navbar.Brand>
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
@@ -27,7 +30,7 @@ function App() {
       </Navbar>
       <Container className='text-center mt-5'>
         <Image src={ImgProfile} roundedCircle fluid className='mt-5' style={{maxWidth: '250px', position: 'relative', zIndex: '1020'}}></Image>
-        <Card className='pb-4' style={{position: 'relative', bottom: '50px', backgroundColor: '#A6192E', color: '#FFFEF4'}}>
+        <Card className='pb-4 bg-redblack' style={{position: 'relative', bottom: '50px', color: '#FFFEF4', borderRadius: '25px'}}>
           <Card.Body>
             <h1 className='mt-5'>Dante Esteban Cortés Ganoza</h1>
             <Card.Text className='fs-5 mt-3'>
@@ -37,7 +40,7 @@ function App() {
             </Card.Text>
           </Card.Body>
         </Card>
-        <Card className="mb-5" style={{backgroundColor: '#FFFEF4', border: '0px'}}>
+        <Card className="mb-5" style={{backgroundColor: '#FFFEF400', border: '0px'}}>
           <Card.Body>
             <OverlayTrigger overlay={<Tooltip className="mb-4">Facebook</Tooltip>}>
               <Card.Link href="https://www.facebook.com/danteecortes" target="_blank">
@@ -76,13 +79,47 @@ function App() {
             </OverlayTrigger>
           </Card.Body>
         </Card>
-        <Card className="my-5" style={{backgroundColor: '#FFFEF4', border: '3px solid #A6192E', borderRadius: '25px'}}>
-          <Card.Body>
+        <Card className="bg-transparent" style={{width: '70%', margin: '0 auto', border: '3px solid #A6192E', borderRadius: '25px'}}>
+          <Card.Body className="text-center">
             <Card.Title className="mb-4">Habilidades</Card.Title>
-            <Image src={logoLaravel} className="m-2" style={{maxHeight: '100px'}}></Image>
-            <Image src={logoPhp} className="m-2" style={{maxHeight: '100px'}}></Image>
-            <Image src={logoVue} className="m-2" style={{maxHeight: '100px'}}></Image>
-            <Image src={logoReact} className="m-2" style={{maxHeight: '100px'}}></Image>
+            <Table responsive style={{width: '100%', margin: '0 auto'}}>
+              <tbody>
+                <tr>
+                  <td className="text-center">
+                    <Image src={logoLaravel} className="m-2 logos-skills"></Image>
+                  </td>
+                  <td className="text-center">
+                    <Image src={logoPhp} className="m-2 logos-skills"></Image>
+                  </td>
+                  <td className="text-center">
+                    <Image src={logoVue} className="m-2 logos-skills"></Image>
+                  </td>
+                </tr>
+                <tr>
+                  <td className="text-center">
+                    <Image src={logoReact} className="m-2 logos-skills"></Image>
+                  </td>
+                  <td className="text-center">
+                    <Image src={logoJavascript} className="m-2 logos-skills"></Image>
+                  </td>
+                  <td className="text-center">
+                    <Image src={logoBootstrap} className="m-2 logos-skills"></Image>
+                  </td>
+                </tr>
+                <tr>
+                  <td className="text-center">
+                    <Image src={logoGit} className="m-2 logos-skills"></Image>
+                  </td>
+                  <td className="text-center">
+                    <Image src={logoSqlserver} className="m-2 logos-skills"></Image>
+                  </td>
+                  <td className="text-center">
+                    <Image src={logoPostgresql} className="m-2 logos-skills"></Image>
+                  </td>
+                </tr>
+              </tbody>
+            </Table>
+            
           </Card.Body>
         </Card>
       </Container>

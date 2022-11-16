@@ -11,3 +11,44 @@
 .br-15 {
     border-radius: 15px;
 }
+
+body {
+    background-image: url('../img/fondo.jpg');
+    background-size: contain;
+    background-position: top;
+}
+
+.bg-redblack {
+    background-image: url('../img/fondorojo.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+.bg-transparent {
+    background: none;
+}
+
+.logos-skills {
+    max-height: 80px;
+    filter: drop-shadow(0px 0px 15px rgb(255, 255, 255));
+}
+
+@media (max-width: 767.98px) {
+    .logos-skills {
+        max-width: 50px;
+        height: auto;
+    }
+    #root > div > div > div.bg-transparent.card {
+        width: 100%;
+    }
+}
+
+@media (max-width: 457.50px) {
+    .logos-skills {
+        max-width: 40px;
+        height: auto;
+    }
+    #root > div > div > div.bg-transparent.card {
+        width: 100%;
+    }
+}
