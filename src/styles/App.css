@@ -1,3 +1,12 @@
+@font-face {
+    font-family: 'PixelifySans';
+    src: url('./fonts/PixelifySans/PixelifySans-VariableFont_wght.ttf') format('truetype'),
+        url('./fonts/PixelifySans/static/PixelifySans-Bold.ttf') format('truetype'),
+        url('./fonts/PixelifySans/static/PixelifySans-Medium.ttf') format('truetype'),
+        url('./fonts/PixelifySans/static/PixelifySans-Regular.ttf') format('truetype'),
+        url('./fonts/PixelifySans/static/PixelifySans-SemiBold.ttf') format('truetype');
+}
+
 .photo-perfil {
     max-width: 250px !important;
     height: auto;
@@ -39,6 +48,7 @@ body {
     background-image: linear-gradient(to bottom right, rgb(255, 244, 157), rgb(205, 176, 44));
     background-size: contain;
     background-position: top;
+    font-family: 'PixelifySans', sans-serif !important;
 }
 
 .bg-redblack {
